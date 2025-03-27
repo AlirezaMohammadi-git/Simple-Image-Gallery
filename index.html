@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Image Gallery</title>
+</head>
+
+<body>
+
+  <main class="main-container">
+
+    <div class="pannel pannel1">
+      <p>Hey</p>
+      <span>let's</span>
+      <p>dance</p>
+    </div>
+    <div class="pannel pannel2">
+      <p>Give</p>
+      <span>Take</span>
+      <p>receive</p>
+    </div>
+    <div class="pannel pannel3">
+      <p>Experience</p>
+      <span>It</span>
+      <p>today</p>
+    </div>
+    <div class="pannel pannel4">
+      <p>give</p>
+      <span>all</span>
+      <p>you can</p>
+    </div>
+    <div class="pannel pannel5">
+      <p>life</p>
+      <span>in</span>
+      <p>motion</p>
+    </div>
+
+  </main>
+
+  <script>
+
+    const pannels = document.querySelectorAll('.pannel')
+
+    pannels.forEach(pannel => {
+      pannel.addEventListener('click', expandPannel)
+      pannel.addEventListener( 'transitionend' , activePanel )
+    })
+
+    function expandPannel() {
+      this.classList.toggle('open')
+    }
+
+    function activePanel() {
+      this.classList.toggle('active')
+    }
+
+  </script>
+
+</body>
+
+</html>
